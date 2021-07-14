@@ -12,4 +12,8 @@ Java Persistence API (JPA) and Hibernate that I needed to create tables, relatio
 To simplify things I used an h2 in-memory database which needs almost no setup but can be swapped out for a 'real' DB
 with minimal work.
 
+Most of the functionality of the rental process can be found in the service package and the CashMachine class in the model package.
+The design should allow for unit tests for most of the methods. Unit tests where not written because of time constraints.
 
+The way (most of) the project is organized is that Controllers receive API calls and use Services to handle
+the business logic and data manipulation. Interactions with the database are delegated to Repositories.
